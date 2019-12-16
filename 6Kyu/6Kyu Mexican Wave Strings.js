@@ -17,10 +17,9 @@ if (str === ''){
 
 let count = 0;
 
-    for (let i = 0; i<str.length; i++){
-    
+    for (let i = 0; i<str.length; i++){ 
 
-      if (str[i] === ' '){
+      if (str[i] === ' '){  //If the string starts with space add a space
         resultStr += ' ';
       }
 
@@ -39,12 +38,9 @@ let count = 0;
         count++;
 
   }
-
 return resultArr
   }
 }
-
-
 console.log(wave('hello'))
 
 
