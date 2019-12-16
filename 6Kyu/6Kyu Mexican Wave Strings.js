@@ -44,7 +44,6 @@ return resultArr
 }
 console.log(wave('hello'))
 
-
 // Best solution 1
 // function wave(str){
 //     let result = [];
