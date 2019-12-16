@@ -44,6 +44,7 @@ return resultArr
 }
 console.log(wave('hello'))
 
+
 // Best solution 1
 // function wave(str){
 //     let result = [];
@@ -56,6 +57,7 @@ console.log(wave('hello'))
     
 //     return result;
 // }
+
 
 // // Best solution 2
 // var wave=w=>[...w].map((a,i)=>w.slice(0,i)+a.toUpperCase()+w.slice(i+1)).filter(a=>a!=w)
