@@ -6,43 +6,43 @@
 // Example
 // wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
-function wave(str){
+// function wave(str){
 
-let length = str.length;
-let resultArr = [];
-let resultStr = '';
+// let length = str.length;
+// let resultArr = [];
+// let resultStr = '';
 
-if (str === ''){
-  return []
-  } else {
+// if (str === ''){
+//   return []
+//   } else {
 
-let count = 0;
+// let count = 0;
 
-    for (let i = 0; i<str.length; i++){ 
+//     for (let i = 0; i<str.length; i++){ 
 
-      if (str[i] === ' '){  //If the string starts with space add a space
-        resultStr += ' ';
-      }
+//       if (str[i] === ' '){  //If the string starts with space add a space
+//         resultStr += ' ';
+//       }
 
-        for (let j = 0; j<str.length; j++){
-          if (count === j) {
-            resultStr += str[j].toUpperCase();
-          }  else { 
-            resultStr += str[j]
-          }  
-        }
+//         for (let j = 0; j<str.length; j++){
+//           if (count === j) {
+//             resultStr += str[j].toUpperCase();
+//           }  else { 
+//             resultStr += str[j]
+//           }  
+//         }
 
-        if (str[i]!=' '){ //If the current value is empty space do not push this string to the result array otherwise we'll have 'two words' in the middle of the array for arrays with more than 1 word
-        resultArr.push(resultStr);
-        }
-        resultStr = ''
-        count++;
+//         if (str[i]!=' '){ //If the current value is empty space do not push this string to the result array otherwise we'll have 'two words' in the middle of the array for arrays with more than 1 word
+//         resultArr.push(resultStr);
+//         }
+//         resultStr = ''
+//         count++;
 
-  }
-return resultArr
-  }
-}
-console.log(wave('hello'))
+//   }
+// return resultArr
+//   }
+// }
+// console.log(wave('hello'))
 
 
 // Best solution 1
@@ -61,3 +61,5 @@ console.log(wave('hello'))
 
 // // Best solution 2
 // var wave=w=>[...w].map((a,i)=>w.slice(0,i)+a.toUpperCase()+w.slice(i+1)).filter(a=>a!=w)
+
+console.log('Heyheyheyyy')
