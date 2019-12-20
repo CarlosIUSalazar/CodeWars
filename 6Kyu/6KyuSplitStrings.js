@@ -6,7 +6,6 @@
 // solution('abcdef') // should return ['ab', 'cd', 'ef']
 
 function solution(str){
-
     newArr = [];
     let strAsArr = str.split('');
     let counter = 0;
