@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/take-a-number-and-sum-its-digits-raised-to-the-consecutive-powers-and-dot-dot-dot-eureka/javascript
+
 function sumDigPow(a, b) {
   let arrAB = [];
   for (let i=0; a <= b; i++) {
