@@ -73,3 +73,11 @@ function rot13(message){
 //     return cipher[i];
 //   }).join('');
 // }
+
+
+//////
+
+// function rot13(message) {
+//     var abc = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+//     return message.replace(/[a-z]/gi, c => abc[abc.indexOf(c) + 13]);
+//   }
