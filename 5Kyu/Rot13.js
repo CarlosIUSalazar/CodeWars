@@ -4,20 +4,21 @@
 //String.fromCharCode(72) gives H
 //'H'.charCodeAt(0)
 //debugger;
+
 function rot13(message){
     let temp =''
     let newString = '';
     for(let i = 0; i < message.length; i++){
-      temp = message[i].charCodeAt();
+      temp = (message[i]).toString().charCodeAt();
       //console.log(temp);
-      if (temp <65 && temp >122) {
-        if (temp > 90 && temp < 97){
-          newString += temp;
-        }
+      if (temp <65 || temp >122) {
+        //if (temp > 90 && temp < 97){
+          newString += String.fromCharCode(temp);
+        //}
       } else if (temp <= 90){
           temp = temp + 13;
         if (temp > 90){
-          temp = temp - 25
+          temp = temp - 26
           newString += String.fromCharCode(temp);
         } else if (temp <= 90){
           newString += String.fromCharCode(temp);
@@ -25,7 +26,7 @@ function rot13(message){
       } else if (temp >= 97){
           temp = temp + 13
           if (temp > 122){
-            temp = temp - 25
+            temp = temp - 26
             newString += String.fromCharCode(temp);
           } else if (temp <= 122){
             newString += String.fromCharCode(temp);
@@ -36,3 +37,22 @@ function rot13(message){
     return newString;
     
     }
+    
+    console.log((rot13('Test')))//Grfg
+    //console.log((4).toString().charCodeAt(0))
+    
+    // var codeA = 'A'.charCodeAt(0),
+    //     codeZ = 'Z'.charCodeAt(0),
+    //     codea = 'a'.charCodeAt(0),
+    //     codez = 'z'.charCodeAt(0);
+    // function rot13(message){
+    //   return message.split('').map(function(char) { 
+    //     var code = char.charCodeAt(0);
+    //     if(codeA <= code && code <= codeZ){
+    //       return String.fromCharCode(((code - codeA) + 13) % 26 + codeA);
+    //     } else if(codea <= code && code <= codez){
+    //       return String.fromCharCode(((code - codea) + 13) % 26 + codea);
+    //     }
+    //     return char;
+    //   }).join('');
+    // }
