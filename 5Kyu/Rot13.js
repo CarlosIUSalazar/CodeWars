@@ -81,3 +81,12 @@ function rot13(message){
 //     var abc = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
 //     return message.replace(/[a-z]/gi, c => abc[abc.indexOf(c) + 13]);
 //   }
+
+/////
+// function rot13(message){
+//     return message.replace(/[a-zA-Z]/g, function(c){
+//       var c13 = c.charCodeAt(0) + 13;
+//       var endCharCode = ( c > 'Z')? 122 : 90;
+//       return String.fromCharCode(  endCharCode < c13 ?  c.charCodeAt(0) - 13 : c13 );
+//     });
+//   }
