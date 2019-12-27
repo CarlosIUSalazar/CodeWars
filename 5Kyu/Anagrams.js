@@ -33,5 +33,4 @@ function anagrams(word, words) {
   return resultArray;
   
   }
-  
   console.log(anagrams('perro',['peorr','rorpe','rompe','mama']));
