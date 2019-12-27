@@ -14,23 +14,27 @@ function anagrams(word, words) {
     let newWordArr = word.split('');
     let tempArray = [];
     let tempWord = [];
+    //let exist = 0;
     let isAnagram = false;
     for (let i = 0; i < words.length; i++)
     {
       tempWord = words[i].split('');
-      //console.log(tempWord)
-      for (let j = 0; j< words.length;j++){
-        if (newWordArr[i]===tempWord[j]){
+     for(let ij = 0; ij <tempWord.length; ij++){ 
+  
+      for (let j = 0; j< tempWord.length;j++){
+        if (newWordArr[ij]===tempWord[j]){
           isAnagram = true;
           tempWord[j] = '*';
         }
-      }  
-      if (isAnagram === true){
-        resultArray.push(words[i]);
       }
-      isAnagram = false;                
+  
+     }   
+    if (isAnagram === true){
+      resultArray.push(words[i]);
+    }
+    isAnagram = false;                
     }
   return resultArray;
   
   }
-  console.log(anagrams('perro',['peorr','rorpe','rompe','mama']));
+  console.log(anagrams('perro',['roepr','rorpe','rompe','mamar']));
