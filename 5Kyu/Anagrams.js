@@ -22,10 +22,10 @@ function anagrams(word, words) {
       for (let j = 0; j< words.length;j++){
         if (newWordArr[i]===tempWord[j]){
           isAnagram = true;
-          
+          tempWord[j] = '*';
         }
       }  
-      if (isAnagram === true && newWordArr.length === tempWord.legth){
+      if (isAnagram === true){
         resultArray.push(words[i]);
       }
       isAnagram = false;                
