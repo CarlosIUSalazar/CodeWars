@@ -9,7 +9,6 @@
 // anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 //debugger;
 function anagrams(word, words) {
-    
   let resultArray = [];
   let newWordArr = word.split('');
   let tempWord = '';
