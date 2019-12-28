@@ -7,7 +7,7 @@
 // anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', 'racer']
 
 // anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
-debugger;
+//debugger;
 function anagrams(word, words) {
     
   let resultArray = [];
