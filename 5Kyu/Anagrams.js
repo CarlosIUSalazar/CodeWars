@@ -7,34 +7,21 @@
 // anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', 'racer']
 
 // anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
-
+debugger;
 function anagrams(word, words) {
     
-    let resultArray = [];
-    let newWordArr = word.split('');
-    let tempArray = [];
-    let tempWord = [];
-    //let exist = 0;
-    let isAnagram = false;
-    for (let i = 0; i < words.length; i++)
-    {
-      tempWord = words[i].split('');
-     for(let ij = 0; ij <tempWord.length; ij++){ 
-  
-      for (let j = 0; j< tempWord.length;j++){
-        if (newWordArr[ij]===tempWord[j]){
-          isAnagram = true;
-          tempWord[j] = '*';
-        }
-      }
-  
-     }   
-    if (isAnagram === true){
-      resultArray.push(words[i]);
+  let resultArray = [];
+  let newWordArr = word.split('');
+  let tempWord = '';
+  let sortedWord = word.split('').sort().join();
+
+  for (let i = 0; i < words.length; i++) {
+    tempWord = words[i].split('').sort().join();
+    if (tempWord === sortedWord) {
+      resultArray.push(words[i])
     }
-    isAnagram = false;                
-    }
-  return resultArray;
-  
   }
-  console.log(anagrams('perro',['roepr','rorpe','rompe','mamar']));
+return resultArray;
+
+}
+console.log(anagrams('perro',['roepr','rorpe','rompe','mamar']));
