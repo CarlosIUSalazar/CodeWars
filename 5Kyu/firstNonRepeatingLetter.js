@@ -11,25 +11,31 @@
 function firstNonRepeatingLetter(s) {
     // Add your code here
     let hist = {};
+    let preResult = "";
     let result = "";
     for (let i = 0; i< s.length; i++){
-        let char = s[i];
+        let char = s[i].toLowerCase();
         if (char in hist){
             hist[char]++;
         } else {
             hist[char] = 1;
         }
     }
-  
     console.log(hist)
   
     for  (let key in hist){
       if (hist[key]===1){
-        result = key;
+        preResult = key;
         break;
       }
     }
   
+    for (let i = 0; i<=s.length;i++){
+      if (s[i] === preResult  || s[i] === preResult.toUpperCase()){
+        result = s[i]
+      }
+    }
+
     return result;
   
   }
