@@ -7,6 +7,31 @@
 
 // If a string contains all repeating characters, it should return an empty string ("") or None -- see sample tests.
 
+// 31 Dec 2019
 function firstNonRepeatingLetter(s) {
     // Add your code here
+    let hist = {};
+    let result = "";
+    for (let i = 0; i< s.length; i++){
+        let char = s[i];
+        if (char in hist){
+            hist[char]++;
+        } else {
+            hist[char] = 1;
+        }
+    }
+  
+    console.log(hist)
+  
+    for  (let key in hist){
+      if (hist[key]===1){
+        result = key;
+        break;
+      }
+    }
+  
+    return result;
+  
   }
+  
+  console.log(firstNonRepeatingLetter('stress'));
