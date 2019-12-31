@@ -41,3 +41,50 @@ function firstNonRepeatingLetter(s) {
   }
   
   console.log(firstNonRepeatingLetter('stress'));
+
+  // ADVANCED SOLUTIONS  https://www.codewars.com/kata/52bc74d4ac05d0945d00054e/solutions/javascript
+  function firstNonRepeatingLetter(s) {
+    for(var i in s) {
+      if(s.match(new RegExp(s[i],"gi")).length === 1) {
+        return s[i];
+      }
+    }
+    return '';
+  }
+
+  ///////
+  function firstNonRepeatingLetter(s) {
+    var t=s.toLowerCase();
+    for (var x=0;x<t.length;x++)
+      if(t.indexOf(t[x]) === t.lastIndexOf(t[x]))
+        return s[x];
+    return "";
+  }
+  ///////
+
+  function firstNonRepeatingLetter(str){
+    return str.split('').find(e => str.match(new RegExp(`${e}`, 'gi')).length === 1) || ''
+  }
+
+  /////
+  function firstNonRepeatingLetter(s) {
+    var search = s.toLowerCase();
+    
+    for (var i = 0; i < search.length; ++i) {
+        var str = search.slice(0, i) + search.slice(i + 1);
+        if((str.indexOf(search[i]) === -1)) {
+            return s[i];
+        }
+    }
+    return '';
+}
+/////
+function firstNonRepeatingLetter(s) {
+    let str = s.toLowerCase();
+    for(let i = 0; i < str.length; i++) {
+      if(str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+        return s[i];
+      }
+    }
+    return "";
+  }
