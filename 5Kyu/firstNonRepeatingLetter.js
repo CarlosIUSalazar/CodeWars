@@ -89,8 +89,6 @@ function firstNonRepeatingLetter(s) {
     return "";
   }
 
-  ////
-
   /////
 function firstNonRepeatingLetter(s) {
   let str = s.toLowerCase();
