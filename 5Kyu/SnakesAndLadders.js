@@ -10,7 +10,6 @@
 
 function SnakesLadders() {
   
-
     let die1 = 0;
     let die2 = 0;
     let doubleTurn = false;
