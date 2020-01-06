@@ -30,5 +30,7 @@ function SnakesLadders() {
     
     if (player1Turn = true){
       positionP1 += spacesToMove;
+
+      
     }
   };
