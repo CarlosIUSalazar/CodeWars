@@ -19,8 +19,6 @@ if (roman[i]+roman[i+1]=== 'CM') {
 } else if (roman[i]+roman[i+1]=== 'XL'){
   total += 40;
   i++
-
-  
 } else if (roman[i]+roman[i+1]=== 'IX'){
   total += 9;
   i++
