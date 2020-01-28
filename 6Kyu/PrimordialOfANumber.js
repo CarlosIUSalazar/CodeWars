@@ -55,4 +55,57 @@ function isPrime(number) {
   
   console.log(numPrimorial(5));
   
+  // ADVANCED SOLUTIONS
+  function isPrime(num) {
+    for(var i = 2; i < num; i++){
+      if(num % i === 0){
+        return false
+      }
+    }
+    return true
+  }
   
+  function numPrimorial(n){
+    let arr = []
+    let i = 2
+    while(arr.length < n){
+      if(isPrime(i)){
+        arr.push(i)
+      }
+     i++
+    }
+    return arr.reduce((a,b) => a * b)
+  }
+  
+
+  ////
+  const numPrimorial = n => [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71].slice(0,n).reduce((p,c) => p*c, 1);
+
+  ///
+  const getPrimeRange = n => {
+    let a = [...new Array(n+1).keys()].filter(x=>x%2).slice(1)
+    a.unshift(2)
+    return a
+  }
+  
+  const isPrime = n => {
+    let begin = Math.floor(Math.sqrt(n))
+    let targets = getPrimeRange(begin)
+    return targets.every(x => n%x !== 0)
+  }
+  
+  
+  const numPrimorial = n => {
+    let primes = [2]
+    let i = 2
+    while (primes.length <= n-1){
+      if (isPrime(i)) primes.push(i)
+      i++
+    }
+    return primes.reduce((s,v)=>s*=v)
+  }
+  
+
+  ///
+  numPrimorial=(a,b=2)=>(f=>a?f(b)?b*numPrimorial(--a,++b):1*numPrimorial(a,++b):1)(f=(a,b=2)=>b*b>a?!0:a%b?f(a,++b):!1)
+
