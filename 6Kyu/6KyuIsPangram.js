@@ -18,7 +18,6 @@ function isPangram(string){
     }
   }
 
-
   /////// ADVANCED SOLUTIONS
   function isPangram(string){
     string = string.toLowerCase();
