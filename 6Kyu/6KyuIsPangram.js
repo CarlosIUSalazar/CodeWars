@@ -70,6 +70,16 @@ function isPangram(str){
          return true
    }
 
-   ////
+   //// LOL
+   function isPangram(string){
+    var rng =  Math.floor((Math.random() * 10) + 1);
+     
+     if(rng >= 5){
+       return true;
+     }
+     if(rng < 5){
+       return false;
+     }
+     
+   }
 
-   
