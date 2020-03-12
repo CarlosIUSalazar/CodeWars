@@ -38,8 +38,6 @@ console.log(array_diff([1,2,3,4,3,4],[3,2]))
 
 //   /////
 
-
-
 // function array_diff(a, b) {
 //     return a.filter(x=>b.indexOf(x));
 //   }
