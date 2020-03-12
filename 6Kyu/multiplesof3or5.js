@@ -13,9 +13,6 @@ function solution(number){
     for (let j = 0; j<multOf3Or5.length; j++){
       total += multOf3Or5[j];
     }
-    
       return total;
-    
-    }
-    
+    }  
     console.log(solution(10));
