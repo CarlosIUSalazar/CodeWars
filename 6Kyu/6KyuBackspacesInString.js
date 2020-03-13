@@ -55,3 +55,22 @@ function clean_string(s) {
     });
     return result;    
   }
+
+
+  ////
+  function clean_string(string) {
+    while (string.indexOf('#') >= 0)
+        string = string.replace(/(^|[^#])#/g, '');
+    return string;
+}
+
+////
+clean_string=s=>~s.indexOf`#`?clean_string(s.replace(/[^#]?#/,'')):s
+
+///
+
+function cleanString(s) {
+    return s.includes("#") ? cleanString(s.replace(/[\s\S]?\#/, "")) : s;
+};
+
+///
