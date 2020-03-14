@@ -19,3 +19,35 @@ var solution = function(firstArray, secondArray) {
 }
 
 console.log(solution([1, 2, 3], [4, 5, 6]))
+
+///  Other Solutions:
+function solution(a, b) {
+    return a.reduce(function(s, n, i) { return s + Math.pow(n - b[i], 2) }, 0) / a.length;
+  }
+
+
+  /////
+
+  function solution(a, b) {
+    return a.reduce(function(s, n, i) { return s + Math.pow(n - b[i], 2) }, 0) / a.length;
+  }
+
+
+  ////
+
+  const _ = require('lodash');
+
+function solution(firstArray, secondArray) {
+  return _(firstArray).zipWith(secondArray, (x, y) => (x - y) ** 2).mean();
+}
+
+/////
+const solution = (a, b) => a.reduce((s, va, i) => s + Math.abs(va - b[i]) ** 2, 0) / a.length;
+///
+
+const solution = (a, b) => a.reduce((acc, n, i) => (n - b[i]) ** 2 + acc, 0) / b.length;
+
+///
+
+const solution = (a, b) => a.reduce((sum, n, i) => sum + (n - b[i])**2, 0) / a.length;
+
