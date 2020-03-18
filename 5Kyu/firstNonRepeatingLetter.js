@@ -22,21 +22,24 @@ function firstNonRepeatingLetter(s) {
         }
     }
     console.log(hist)
-
+  
     for  (let key in hist){
       if (hist[key]===1){
         preResult = key;
         break;
       }
     }
+  
     for (let i = 0; i<=s.length;i++){
       if (s[i] === preResult  || s[i] === preResult.toUpperCase()){
         result = s[i]
       }
     }
+
     return result;
   
   }
+  
   console.log(firstNonRepeatingLetter('stress'));
 
   // ADVANCED SOLUTIONS  https://www.codewars.com/kata/52bc74d4ac05d0945d00054e/solutions/javascript
@@ -48,6 +51,7 @@ function firstNonRepeatingLetter(s) {
     }
     return '';
   }
+
   ///////
   function firstNonRepeatingLetter(s) {
     var t=s.toLowerCase();
@@ -61,6 +65,7 @@ function firstNonRepeatingLetter(s) {
   function firstNonRepeatingLetter(str){
     return str.split('').find(e => str.match(new RegExp(`${e}`, 'gi')).length === 1) || ''
   }
+
   /////
   function firstNonRepeatingLetter(s) {
     var search = s.toLowerCase();

@@ -32,8 +32,10 @@ function rot13(message){
             newString += String.fromCharCode(temp);
           }
       }
+    
     }
     return newString;
+    
     }
     
     console.log((rot13('Test')))//Grfg

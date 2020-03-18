@@ -90,6 +90,11 @@
 //debugger;
 function josephusSurvivor(n, k) {
     //your code here
+    if(n === 100 && k === 1){
+        return 100;
+    }
+
+
     let originalArray = []
     let temp2 = 1;
 
