@@ -49,17 +49,64 @@
 
   //  Different Approach
 //debugger;
-  function josephusSurvivor(n, k) {
+//   function josephusSurvivor(n, k) {
+//     //your code here
+//     let originalArray = []
+
+//      for (let i = 1; i <= n; i++) {
+//          originalArray.push(i)
+//      }
+// //console.log(originalArray)
+//     let tempArray = [];
+//     let long = (n * k)
+//     let temp = 0;
+
+//     for(let i = 0; i<=long; i++){
+//         if(originalArray.length === 1 && tempArray.length === 0){
+//             return originalArray[0];
+//         }
+//         temp++
+//         if(temp !== k){
+//             tempArray.push(originalArray[0])
+//             originalArray.shift()
+//             if(originalArray.length === 0){
+//                 originalArray = originalArray.concat(tempArray)
+//                 tempArray = [];
+//             }
+//         } 
+//         if (temp === k) {
+//             originalArray.shift()
+//             originalArray = originalArray.concat(tempArray)
+//             tempArray = [];
+//             temp = 0;
+//         }
+//     }
+//   }
+
+//   console.log(josephusSurvivor(7,3));
+
+
+    //  Attempt to optimize solution by creating a shorter array from the get go.
+//debugger;
+function josephusSurvivor(n, k) {
     //your code here
     let originalArray = []
+    let temp2 = 1;
 
      for (let i = 1; i <= n; i++) {
-         originalArray.push(i)
+        if(temp2 !== k){
+            originalArray.push(i)
+        } else {
+            temp2 = 0
+        }
+        temp2++;
      }
-//console.log(originalArray)
+//console.log("oroginalArray is",originalArray)
+
+
     let tempArray = [];
     let long = (n * k)
-    let temp = 0;
+    let temp = temp2-1;
 
     for(let i = 0; i<=long; i++){
         if(originalArray.length === 1 && tempArray.length === 0){
@@ -83,4 +130,4 @@
     }
   }
 
-  console.log(josephusSurvivor(4898,2790));
+  console.log(josephusSurvivor(7,3));
