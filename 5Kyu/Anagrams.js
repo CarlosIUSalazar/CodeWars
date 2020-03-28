@@ -21,7 +21,6 @@ function anagrams(word, words) {
     }
   }
 return resultArray;
-
 }
 console.log(anagrams('perro',['roepr','rorpe','rompe','mamar']));
 
