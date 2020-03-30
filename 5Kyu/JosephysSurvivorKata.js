@@ -107,8 +107,6 @@ function josephusSurvivor(n, k) {
         temp2++;
      }
 //console.log("oroginalArray is",originalArray)
-
-
     let tempArray = [];
     let long = (n * k)
     let temp = temp2-1;
