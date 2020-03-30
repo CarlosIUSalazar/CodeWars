@@ -93,8 +93,6 @@ function josephusSurvivor(n, k) {
     if(n === 100 && k === 1){
         return 100;
     }
-
-
     let originalArray = []
     let temp2 = 1;
 
