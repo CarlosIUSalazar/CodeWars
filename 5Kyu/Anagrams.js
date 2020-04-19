@@ -24,30 +24,32 @@ return resultArray;
 }
 console.log(anagrams('perro',['roepr','rorpe','rompe','mamar']));
 
-/////  Advanced solutions  https://www.codewars.com/kata/523a86aa4230ebb5420001e1/solutions/javascript
-String.prototype.sort = function() {
-  return this.split("").sort().join("");
-};
-
-function anagrams(word, words) {
-  return words.filter(function(x) {
-      return x.sort() === word.sort();
-  });
-}
 
 
-/////
-function anagrams(word, words) {
-  word = word.split('').sort().join('');
-  return words.filter(function(v) {return word == v.split('').sort().join('');});
-}
+// /////  Advanced solutions  https://www.codewars.com/kata/523a86aa4230ebb5420001e1/solutions/javascript
+// String.prototype.sort = function() {
+//   return this.split("").sort().join("");
+// };
 
-/////
+// function anagrams(word, words) {
+//   return words.filter(function(x) {
+//       return x.sort() === word.sort();
+//   });
+// }
 
-let anagrams = (word, words) => words.filter(w => w.split('').sort().join('') === word.split('').sort().join(''));
+
+// /////
+// function anagrams(word, words) {
+//   word = word.split('').sort().join('');
+//   return words.filter(function(v) {return word == v.split('').sort().join('');});
+// }
+
+// /////
+
+// let anagrams = (word, words) => words.filter(w => w.split('').sort().join('') === word.split('').sort().join(''));
 
 
-////
+// ////
 
 
 
