@@ -13,7 +13,6 @@ function anagrams(word, words) {
   let newWordArr = word.split('');
   let tempWord = '';
   let sortedWord = word.split('').sort().join();
-
   for (let i = 0; i < words.length; i++) {
     tempWord = words[i].split('').sort().join();
     if (tempWord === sortedWord) {
