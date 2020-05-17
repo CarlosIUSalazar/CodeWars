@@ -5,12 +5,10 @@
 // defaults(aws, {compute: "lambda", storage: "s3"}, {storage: "glacier", rds: "postgres"});
 // => {compute: "ec2", storage: "s3", rds: "postgres"}
 debugger;
-
 const defaults = (target,source) => {
     // [SOLUTION HERE]
     for (let key in source){
-
-      
+    
       if (!target[key]){
         target.key = source[key];
       }
