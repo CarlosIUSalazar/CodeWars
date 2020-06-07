@@ -19,11 +19,8 @@ function anagrams(word, words) {
     if (tempWord === sortedWord) {
       resultArray.push(words[i])
     }
-
   }
-
   return resultArray;
-
 }
 
 console.log(anagrams('perro',['roepr','rorpe','rompe','mamar']));
