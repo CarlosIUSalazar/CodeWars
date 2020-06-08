@@ -10,11 +10,8 @@
 //debugger;
 function anagrams(word, words) {
   let resultArray = [];
-
   let newWordArr = word.split('');
-
   let tempWord = '';
-
   let sortedWord = word.split('').sort().join();
   
   for (let i = 0; i < words.length; i++) {
