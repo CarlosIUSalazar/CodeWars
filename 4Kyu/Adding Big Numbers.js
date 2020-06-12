@@ -1,7 +1,5 @@
 // We need to sum big numbers and we require your help.
-
-// Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.
-
+// Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string
 // Example
 // add("123", "321"); -> "444"
 // add("11", "99");   -> "110"
@@ -14,7 +12,6 @@
 // function add(a, b) {
 //     return total.toString() = Number(a) + Number(b)
 //   }
-
   //// Alternative Solution
   function add(a, b) {
     let total = "",
