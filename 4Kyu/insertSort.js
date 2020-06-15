@@ -1,5 +1,4 @@
 const insertionSort = (array) => {
-    // [SOLUTION HERE]
     let next = array[1]; console.log("next",next)
     let prev = array[0]; console.log("prev",prev)
     let temp;
