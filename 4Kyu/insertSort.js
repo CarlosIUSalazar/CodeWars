@@ -20,6 +20,9 @@ const insertionSort = (array) => {
         }
     }
 }
+
 console.log("after",array)
+
   }; 
+  
   console.log(insertionSort([7,4,2,5,15]))
