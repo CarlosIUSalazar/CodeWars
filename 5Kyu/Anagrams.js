@@ -19,10 +19,7 @@ function anagrams(word, words) {
   }
   return resultArray;
 }
-
 console.log(anagrams('perro',['roepr','rorpe','rompe','mamar']));
-
-
 
 // /////  Advanced solutions  https://www.codewars.com/kata/523a86aa4230ebb5420001e1/solutions/javascript
 // String.prototype.sort = function() {
