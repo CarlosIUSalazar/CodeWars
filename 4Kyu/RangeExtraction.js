@@ -11,9 +11,7 @@ function solution(list){
       return range;
     });
   }
-
   //// Other //
-  
   function solution(list) {
     list = list.map((v, i) => list[i - 1] == v - 1 && list[i + 1] == v + 1 ? '-' : v);
     return list.filter((v, i) => v != '-' || list[i - 1] != '-').join(',').replace(/,-,/g, '-');
