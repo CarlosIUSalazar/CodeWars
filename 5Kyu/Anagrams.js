@@ -29,16 +29,12 @@ console.log(anagrams('perro',['roepr','rorpe','rompe','mamar']));
 //       return x.sort() === word.sort();
 //   });
 // }
-
-
 // /////
 // function anagrams(word, words) {
 //   word = word.split('').sort().join('');
 //   return words.filter(function(v) {return word == v.split('').sort().join('');});
 // }
-
 // /////
-
 // let anagrams = (word, words) => words.filter(w => w.split('').sort().join('') === word.split('').sort().join(''));
 
 
